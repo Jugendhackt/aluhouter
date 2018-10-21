@@ -12,5 +12,6 @@
 		The router is flashed and got the Freifunk Firmware. For further instructions, visit their website. The firmware depends on the local Freifunk group at your city.
 		Berlin Freifunk page: https://berlin.freifunk.net/index_en/
 		German version:       https://berlin.freifunk.net/
+		On the router, there is a Shellscript transmitting data. It can be found at ./router_shellscript.
 	</router>
 <readme>
