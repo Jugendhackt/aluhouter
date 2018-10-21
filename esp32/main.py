@@ -1,5 +1,6 @@
 import machine
 import neopixel
+import utime
 
 STREIFEN_ANZAHL = 3
 PER_STREIFEN = 5
@@ -19,7 +20,7 @@ def mapTo5(input):
 	elif input < -70:
 		return 4
 
-	elif input > -65:
+	elif input > -65 and input < 0:
 		return 5
 
 	else:
@@ -73,3 +74,9 @@ def draw_error():
 			led_index = streifen_index * 5 + led_in_streifen_index
 
 			np[led_index] = (255, 255, 255)
+
+def run_loading_animation():
+	while True:
+		for nr in range(5):
+			drawLights(nr +1)
+			utime.sleep_ms(500)
