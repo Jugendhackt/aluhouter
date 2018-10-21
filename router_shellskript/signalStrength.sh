@@ -8,7 +8,7 @@ start() {
 	echo $! > /var/run/program.pid
         while true;
 	do
-		iwinfo wlan0-adhoc-2 info | grep "Signal: " | xargs | cut -d " " -f 2 > /dev/ttyS0;
+		echo "drawLights(mapTo5(" $(iwinfo wlan0-adhoc-2 info | grep "Signal: " | xargs | cut -d " " -f 2 > /dev/ttyS0) "))";
 		sleep 1;
 	done &
 }                 
